@@ -14,16 +14,16 @@
     <span id="text"></span>
     
     <script>
-        window.addEventListener("DOMContentLoaded", (event) => {
-    
+
+        customElements.whenDefined("my-component").then(() => {
             var component = document.querySelector("my-component");
             var text = document.getElementById("text");
-        
+
             component.getText().then((txt) => {
                 text.innerHTML = txt;
             });
-    
         });
+
     </script>
 
 </body>
